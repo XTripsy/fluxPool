@@ -42,6 +42,7 @@ void AFluxPoolActor::OnSpawnFromPool_Implementation()
 	SetActorHiddenInGame(false);
 	SetActorEnableCollision(true);
 	SetActorTickEnabled(true);
+	OnSpawn();
 }
 
 void AFluxPoolActor::OnReturnToPool_Implementation()
@@ -50,4 +51,5 @@ void AFluxPoolActor::OnReturnToPool_Implementation()
 	SetActorEnableCollision(false);
 	SetActorTickEnabled(false);
 	SetActorLocation(FVector(0.0f, 0.0f, -1000.0f));
+	OnReturn();
 }

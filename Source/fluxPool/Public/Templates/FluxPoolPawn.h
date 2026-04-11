@@ -28,6 +28,12 @@ public:
 protected:
 	virtual void PostInitProperties() override;
 	
+	UFUNCTION(BlueprintImplementableEvent, Category = "FluxPool")
+	void OnSpawn();
+	
+	UFUNCTION(BlueprintImplementableEvent, Category = "FluxPool")
+	void OnReturn();
+	
 	UFUNCTION(BlueprintCallable, Category = "FluxPool")
 	void End();
 
